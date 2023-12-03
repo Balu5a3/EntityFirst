@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="BaluEntityFirst" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="BaluEntityFirstContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UserTable" EntityType="BaluEntityFirst.UserTable" />
+    <EntitySet Name="Addresses" EntityType="BaluEntityFirst.Address" />
+    <AssociationSet Name="UserTableAddress" Association="BaluEntityFirst.UserTableAddress">
+      <End Role="UserTable" EntitySet="UserTable" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Addresses" Relationship="BaluEntityFirst.UserTableAddress" FromRole="UserTable" ToRole="Address" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="UserTable" Relationship="BaluEntityFirst.UserTableAddress" FromRole="Address" ToRole="UserTable" />
+    <Property Name="UserTableId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="UserTableAddress">
+    <End Type="BaluEntityFirst.UserTable" Role="UserTable" Multiplicity="1" />
+    <End Type="BaluEntityFirst.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserTable">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="UserTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,12 @@
+D:\VS2034\EntityFirst\EntityFirstEntity\bin\Debug\EntityFirstEntity.dll.config
+D:\VS2034\EntityFirst\EntityFirstEntity\bin\Debug\EntityFirstEntity.dll
+D:\VS2034\EntityFirst\EntityFirstEntity\bin\Debug\EntityFirstEntity.pdb
+D:\VS2034\EntityFirst\EntityFirstEntity\obj\Debug\EntityFirstEntity.csprojResolveAssemblyReference.cache
+D:\VS2034\EntityFirst\EntityFirstEntity\obj\Debug\EntityFirstEntity.dll
+D:\VS2034\EntityFirst\EntityFirstEntity\obj\Debug\EntityFirstEntity.pdb
+D:\VS2034\EntityFirst\EntityFirstEntity\bin\Debug\EntityFramework.dll
+D:\VS2034\EntityFirst\EntityFirstEntity\bin\Debug\EntityFramework.SqlServer.dll
+D:\VS2034\EntityFirst\EntityFirstEntity\bin\Debug\EntityFramework.xml
+D:\VS2034\EntityFirst\EntityFirstEntity\bin\Debug\EntityFramework.SqlServer.xml
+D:\VS2034\EntityFirst\EntityFirstEntity\obj\Debug\EntityFirstEntity.Form1.resources
+D:\VS2034\EntityFirst\EntityFirstEntity\obj\Debug\EntityFirstEntity.csproj.GenerateResource.Cache
